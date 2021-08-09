@@ -14,6 +14,8 @@
  - create producer kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic
  - with property create producer kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic --producer-property acks=all
  #### consumer
- - kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-third-application
+ - kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic
+ - kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
+ - with group kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-third-application
  - kafka-consumer-groups.sh --bootsrap-server localhost:9092 -group my-first-application --reset-offsets --to-earliest --execute --topic first_topic 
  
