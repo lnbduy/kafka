@@ -17,5 +17,9 @@
  - kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic
  - kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
  - with group kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-third-application
- - kafka-consumer-groups.sh --bootsrap-server localhost:9092 -group my-first-application --reset-offsets --to-earliest --execute --topic first_topic 
+ #### consumer group
+ - List all consumer groups: kafka-consumer-groups.sh --bootsrap-server localhost:9092 --list
+ - Describe a consumer group: kafka-consumer-groups.sh --bootsrap-server localhost:9092 --describe --group my-application
+ - kafka-consumer-groups.sh --bootsrap-server localhost:9092 --topic first_topic --group my-application
+ - Reset offset kafka-consumer-groups.sh --bootsrap-server localhost:9092 -group my-first-application --reset-offsets --to-earliest --execute --topic first_topic 
  
