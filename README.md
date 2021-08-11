@@ -22,4 +22,9 @@
  - Describe a consumer group: kafka-consumer-groups.sh --bootsrap-server localhost:9092 --describe --group my-application
  - kafka-consumer-groups.sh --bootsrap-server localhost:9092 --topic first_topic --group my-application
  - Reset offset kafka-consumer-groups.sh --bootsrap-server localhost:9092 -group my-first-application --reset-offsets --to-earliest --execute --topic first_topic 
- 
+ jXBN8Vr3B0ICbZtJS6VAfw6Wc
+ubJqI7X57F2MRyVc5DkCtCxZk8aeAHkjsUEGAPD0eXwCZhjvgf
+
+1107800174-pJEJ1ggGIonFw12tiPdc7Vwmi90mkdWEvXjp3QW
+
+Frr4CNdBAoMQOpDfBgnvpHouUbtdFSu9vDJkOmOY2qkOL
