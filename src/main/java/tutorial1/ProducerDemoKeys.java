@@ -22,10 +22,10 @@ public class ProducerDemoKeys {
 
         for (int i = 0; i< 10; i++) {
             String topic = "first_topic";
-            String value = "hello world" + i;
+            String value = "hello world " + i;
             String key = "id_" + i;
             // create a producer record
-            ProducerRecord<String, String> record = new ProducerRecord<>(topic, value, key);
+            ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
 
             logger.info("Key: " + key);
             // send data
