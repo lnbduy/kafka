@@ -15,14 +15,14 @@ import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
 
 public class ConsumerDemoWithThread {
+    public ConsumerDemoWithThread() {
+    }
+
     public static void main(String[] args) {
 
         new ConsumerDemoWithThread().run();
 
 
-    }
-
-    public ConsumerDemoWithThread() {
     }
 
     private void run() {
@@ -58,9 +58,10 @@ public class ConsumerDemoWithThread {
     }
 
     public class ConsumerRunnable implements Runnable {
-        private CountDownLatch latch;
         KafkaConsumer<String, String> consumer;
-        private Logger logger = LoggerFactory.getLogger(ConsumerDemoWithThread.class.getName());
+        private final CountDownLatch latch;
+        private final Logger logger = LoggerFactory.getLogger(ConsumerDemoWithThread.class.getName());
+
         public ConsumerRunnable(String bootstrapServer, String groupId, String topic, CountDownLatch latch) {
             this.latch = latch;
             Properties properties = new Properties();

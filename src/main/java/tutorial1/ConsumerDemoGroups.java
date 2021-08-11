@@ -33,10 +33,10 @@ public class ConsumerDemoGroups {
         // subscribe consumer
         consumer.subscribe(Arrays.asList("first_topic"));
 
-        while(true) {
+        while (true) {
 
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, String> record: records) {
+            for (ConsumerRecord<String, String> record : records) {
                 logger.info("Key: " + record.key() + ", Value: " + record.value());
                 logger.info("Partition: " + record.partition() + ", Offset: " + record.offset());
             }

@@ -41,10 +41,10 @@ public class ConsumerDemoAssignSeek {
         boolean keepOnReading = true;
         int numberOfMessagesReadSoFar = 0;
 
-        while(keepOnReading) {
+        while (keepOnReading) {
 
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, String> record: records) {
+            for (ConsumerRecord<String, String> record : records) {
                 numberOfMessagesReadSoFar += 1;
                 logger.info("Key: " + record.key() + ", Value: " + record.value());
                 logger.info("Partition: " + record.partition() + ", Offset: " + record.offset());

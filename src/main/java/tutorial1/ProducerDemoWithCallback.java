@@ -20,7 +20,7 @@ public class ProducerDemoWithCallback {
         // create the producer
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
 
-        for (int i = 0; i< 10; i++) {
+        for (int i = 0; i < 10; i++) {
 
             // create a producer record
             ProducerRecord<String, String> record = new ProducerRecord<>("first_topic", "hello world " + i);

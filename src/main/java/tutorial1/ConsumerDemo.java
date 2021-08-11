@@ -10,8 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Properties;
 
 public class ConsumerDemo {
@@ -35,10 +33,10 @@ public class ConsumerDemo {
         // subscribe consumer
         consumer.subscribe(Arrays.asList("first_topic"));
 
-        while(true) {
+        while (true) {
 
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, String> record: records) {
+            for (ConsumerRecord<String, String> record : records) {
                 logger.info("Key: " + record.key() + ", Value: " + record.value());
                 logger.info("Partition: " + record.partition() + ", Offset: " + record.offset());
             }
