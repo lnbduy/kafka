@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="kafka-basic" />
         <module name="kafka-producer-twitter" />
+        <module name="kafaka-consumer-elasticsearch" />
       </profile>
     </annotationProcessing>
   </component>
